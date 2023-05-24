@@ -1,0 +1,1281 @@
+[
+    {
+        "id": "455615364d62cb12",
+        "type": "tab",
+        "label": "Keep Target SoC",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "92520bcfcc8496b6",
+        "type": "victron-input-system",
+        "z": "455615364d62cb12",
+        "service": "com.victronenergy.system",
+        "path": "/Dc/Battery/Power",
+        "serviceObj": {
+            "service": "com.victronenergy.system",
+            "name": "com.victronenergy.system",
+            "paths": [
+                {
+                    "path": "/Ac/ActiveIn/Source",
+                    "type": "enum",
+                    "name": "AC-Input",
+                    "enum": {
+                        "0": "Not available",
+                        "1": "Grid",
+                        "2": "Generator",
+                        "3": "Shore",
+                        "240": "Inverting"
+                    }
+                },
+                {
+                    "path": "/Ac/Consumption/L1/Power",
+                    "type": "float",
+                    "name": "AC Consumption L1 (W)"
+                },
+                {
+                    "path": "/Ac/Consumption/L2/Power",
+                    "type": "float",
+                    "name": "AC Consumption L2 (W)"
+                },
+                {
+                    "path": "/Ac/Consumption/L3/Power",
+                    "type": "float",
+                    "name": "AC Consumption L3 (W)"
+                },
+                {
+                    "path": "/Ac/Genset/DeviceType",
+                    "type": "float",
+                    "name": "Genset Device Type",
+                    "enum": {}
+                },
+                {
+                    "path": "/Ac/Genset/L1/Power",
+                    "type": "float",
+                    "name": "Genset L1 (W)"
+                },
+                {
+                    "path": "/Ac/Genset/L2/Power",
+                    "type": "float",
+                    "name": "Genset L2 (W)"
+                },
+                {
+                    "path": "/Ac/Genset/L3/Power",
+                    "type": "float",
+                    "name": "Genset L3 (W)"
+                },
+                {
+                    "path": "/Ac/Genset/NumberOfPhases",
+                    "type": "integer",
+                    "name": "Genset Number Of Phases"
+                },
+                {
+                    "path": "/Ac/Grid/DeviceType",
+                    "type": "float",
+                    "name": "Grid Device Type"
+                },
+                {
+                    "path": "/Ac/Grid/L1/Power",
+                    "type": "float",
+                    "name": "Grid L1 (W)"
+                },
+                {
+                    "path": "/Ac/Grid/L2/Power",
+                    "type": "float",
+                    "name": "Grid L2 (W)"
+                },
+                {
+                    "path": "/Ac/Grid/L3/Power",
+                    "type": "float",
+                    "name": "Grid L3 (W)"
+                },
+                {
+                    "path": "/Ac/Grid/NumberOfPhases",
+                    "type": "integer",
+                    "name": "Grid Number Of Phases"
+                },
+                {
+                    "path": "/Ac/PvOnGenset/L1/Power",
+                    "type": "float",
+                    "name": "PV Power AC-tied on Generator L1"
+                },
+                {
+                    "path": "/Ac/PvOnGenset/L2/Power",
+                    "type": "float",
+                    "name": "PV Power AC-tied on Generator L2"
+                },
+                {
+                    "path": "/Ac/PvOnGenset/L3/Power",
+                    "type": "float",
+                    "name": "PV Power AC-tied on Generator L3"
+                },
+                {
+                    "path": "/Ac/PvOnGenset/NumberOfPhases",
+                    "type": "integer",
+                    "name": "PV Power AC-tied on Generator Number Of Phases"
+                },
+                {
+                    "path": "/Ac/PvOnGrid/L1/Power",
+                    "type": "float",
+                    "name": "PV - AC-coupled on input L1 (W)"
+                },
+                {
+                    "path": "/Ac/PvOnGrid/L2/Power",
+                    "type": "float",
+                    "name": "PV - AC-coupled on input L2 (W)"
+                },
+                {
+                    "path": "/Ac/PvOnGrid/L3/Power",
+                    "type": "float",
+                    "name": "PV - AC-coupled on input L3 (W)"
+                },
+                {
+                    "path": "/Ac/PvOnGrid/NumberOfPhases",
+                    "type": "integer",
+                    "name": "PV - AC-coupled on input Number Of Phases"
+                },
+                {
+                    "path": "/Ac/PvOnOutput/L1/Power",
+                    "type": "float",
+                    "name": "PV - AC-coupled on output L1 (W)"
+                },
+                {
+                    "path": "/Ac/PvOnOutput/L2/Power",
+                    "type": "float",
+                    "name": "PV - AC-coupled on output L2 (W)"
+                },
+                {
+                    "path": "/Ac/PvOnOutput/L3/Power",
+                    "type": "float",
+                    "name": "PV - AC-coupled on output L3 (W)"
+                },
+                {
+                    "path": "/Ac/PvOnOutput/NumberOfPhases",
+                    "type": "integer",
+                    "name": "PV - AC-coupled on output Number Of Phases"
+                },
+                {
+                    "path": "/Buzzer/State",
+                    "type": "float",
+                    "name": "Buzzer State",
+                    "enum": {
+                        "0": "Off",
+                        "1": "On"
+                    }
+                },
+                {
+                    "path": "/Dc/Battery/ConsumedAmphours",
+                    "type": "float",
+                    "name": "Battery Consumed Amphours (Ah)"
+                },
+                {
+                    "path": "/Dc/Battery/Current",
+                    "type": "float",
+                    "name": "Battery current (A)"
+                },
+                {
+                    "path": "/Dc/Battery/Power",
+                    "type": "float",
+                    "name": "Battery Power (W)"
+                },
+                {
+                    "path": "/Dc/Battery/Soc",
+                    "type": "float",
+                    "name": "Battery State of Charge (%)"
+                },
+                {
+                    "path": "/Dc/Battery/State",
+                    "type": "enum",
+                    "name": "Battery state",
+                    "enum": {
+                        "0": "idle",
+                        "1": "charging",
+                        "2": "discharging"
+                    }
+                },
+                {
+                    "path": "/Dc/Battery/Temperature",
+                    "type": "float",
+                    "name": "Battery temperature (C)"
+                },
+                {
+                    "path": "/Dc/Battery/TimeToGo",
+                    "type": "float",
+                    "name": "Battery Time to Go (h)"
+                },
+                {
+                    "path": "/Dc/Battery/Voltage",
+                    "type": "float",
+                    "name": "Battery voltage (V)"
+                },
+                {
+                    "path": "/Dc/Charger/Power",
+                    "type": "integer",
+                    "name": "AC-Chargers - power (W)"
+                },
+                {
+                    "path": "/Dc/Pv/Current",
+                    "type": "float",
+                    "name": "MPPTs - current (A)"
+                },
+                {
+                    "path": "/Dc/Pv/Power",
+                    "type": "float",
+                    "name": "MPPTs - power (W)"
+                },
+                {
+                    "path": "/Dc/System/Power",
+                    "type": "float",
+                    "name": "DC System (W)"
+                },
+                {
+                    "path": "/Dc/Vebus/Current",
+                    "type": "float",
+                    "name": "VE.Bus charge current (A)"
+                },
+                {
+                    "path": "/Dc/Vebus/Power",
+                    "type": "float",
+                    "name": "VE.Bus charge power (W)"
+                },
+                {
+                    "path": "/Serial",
+                    "type": "string",
+                    "name": "Serial (System)"
+                },
+                {
+                    "path": "/SystemType",
+                    "type": "string",
+                    "name": "System type"
+                },
+                {
+                    "path": "/Timers/TimeOff",
+                    "type": "float",
+                    "name": "Time off (s)"
+                },
+                {
+                    "path": "/Timers/TimeOnGenerator",
+                    "type": "float",
+                    "name": "Time generator (s)"
+                },
+                {
+                    "path": "/Timers/TimeOnGrid",
+                    "type": "float",
+                    "name": "Time grid (s)"
+                },
+                {
+                    "path": "/Timers/TimeOnInverter",
+                    "type": "float",
+                    "name": "Time inverting (s)"
+                }
+            ]
+        },
+        "pathObj": {
+            "path": "/Dc/Battery/Power",
+            "type": "float",
+            "name": "Battery Power (W)"
+        },
+        "initial": "",
+        "name": "Battery Power",
+        "x": 110,
+        "y": 40,
+        "wires": [
+            [
+                "34ae72202380a25b"
+            ]
+        ]
+    },
+    {
+        "id": "c8c64f0ab3f0cbfd",
+        "type": "function",
+        "z": "455615364d62cb12",
+        "name": "New GridPoint",
+        "func": "var KeepTargetSoC = global.get(\"KeepTargetSoC\") || false;\nvar BatterySoC = global.get(\"BatterySoC\") || 0.0;\nvar TargetSoC = global.get(\"TargetSoC\") || 20;\nvar ChargePower = global.get(\"ChargePower\") || 0.0;\nvar DischargePower = global.get(\"DischargePower\") || 0.0;\nvar change = flow.get(\"ChangedToOff\") || false;\n\nif (change) {\n    flow.set(\"ChangedToOff\", false);\n    msg.topic = 'SetToZero';\n    msg.payload = 0;\n    return msg;\n}\n\nif (!KeepTargetSoC) return;\n\nmsg.topic = 'NewGridPoint';\n\nvar ActualPoint = msg.payload[\"GridSetPoint\"];\nvar BatteryPower = msg.payload[\"BatteryPower\"];\nvar NewPoint = ActualPoint-BatteryPower;\nvar BatteryPowerNew;\nmsg.BatteryPower = BatteryPower;\n\nif (BatterySoC < TargetSoC) NewPoint +=ChargePower;\nif (BatterySoC > TargetSoC) NewPoint -=DischargePower;\n\nif (NewPoint > 0) {\n    msg.payload = 0;\n    return msg;\n}\n\nif (BatteryPower == 0) {\n    return;\n}\n\nif (Math.abs(BatteryPower) >= 300) BatteryPowerNew = Math.round(BatteryPower/3);\nelse if (Math.abs(BatteryPower) >= 100) BatteryPowerNew = BatteryPower > 0 ? 100 : -100;\nelse BatteryPowerNew = BatteryPower;\n\nNewPoint = Math.round(ActualPoint-BatteryPowerNew);\nmsg.payload = NewPoint;\nmsg.BatteryPowerNew = BatteryPowerNew;\nmsg.ActualPoint = ActualPoint;\nmsg.BatterySoC = BatterySoC;\nmsg.TargetSoC = TargetSoC;\nmsg.ChargePower = ChargePower;\nmsg.DischargePower = DischargePower;\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 120,
+        "y": 140,
+        "wires": [
+            [
+                "3d46bb70ee005927",
+                "8811a0f7a5f128c3"
+            ]
+        ]
+    },
+    {
+        "id": "3d46bb70ee005927",
+        "type": "victron-output-ess",
+        "z": "455615364d62cb12",
+        "service": "com.victronenergy.settings",
+        "path": "/Settings/CGwacs/AcPowerSetPoint",
+        "serviceObj": {
+            "service": "com.victronenergy.settings",
+            "name": "ESS System Settings",
+            "paths": [
+                {
+                    "path": "/Settings/CGwacs/AcPowerSetPoint",
+                    "type": "integer",
+                    "name": "Grid set-point (W)",
+                    "writable": true
+                },
+                {
+                    "path": "/Settings/CGwacs/BatteryLife/MinimumSocLimit",
+                    "type": "integer",
+                    "name": "Minimum Discharge SOC (%)",
+                    "writable": true
+                },
+                {
+                    "path": "/Settings/CGwacs/BatteryLife/State",
+                    "type": "enum",
+                    "name": "ESS state",
+                    "enum": {
+                        "1": "BatteryLife enabled (GUI controlled)",
+                        "2": "Optimized Mode /w BatteryLife: self consumption",
+                        "3": "Optimized Mode /w BatteryLife: self consumption, SoC exceeds 85%",
+                        "4": "Optimized Mode /w BatteryLife: self consumption, SoC at 100%",
+                        "5": "Optimized Mode /w BatteryLife: SoC below dynamic SoC limit",
+                        "6": "Optimized Mode /w BatteryLife: SoC has been below SoC limit for more than 24 hours. Charging the battery (5A)",
+                        "7": "Optimized Mode /w BatteryLife: Inverter/Charger is in sustain mode",
+                        "8": "Optimized Mode /w BatteryLife: recharging, SoC dropped by 5% or more below the minimum SoC",
+                        "9": "'Keep batteries charged' mode is enabled",
+                        "10": "Optimized mode w/o BatteryLife: self consumption, SoC at or above minimum SoC",
+                        "11": "Optimized mode w/o BatteryLife: self consumption, SoC is below minimum SoC",
+                        "12": "Optimized mode w/o BatteryLife: recharging, SoC dropped by 5% or more below minimum SoC"
+                    },
+                    "writable": true
+                },
+                {
+                    "path": "/Settings/CGwacs/Hub4Mode",
+                    "type": "enum",
+                    "name": "ESS mode",
+                    "enum": {
+                        "1": "Optimized mode or 'keep batteries charged' and phase compensation enabled",
+                        "2": "Optimized mode or 'keep batteries charged' and phase compensation disabled",
+                        "3": "External control"
+                    },
+                    "writable": true
+                },
+                {
+                    "path": "/Settings/CGwacs/MaxDischargePower",
+                    "type": "integer",
+                    "name": "Max inverter power (W)",
+                    "writable": true
+                },
+                {
+                    "path": "/Settings/CGwacs/MaxFeedInPower",
+                    "type": "integer",
+                    "name": "Maximum System Grid Feed In (W)",
+                    "remarks": "<ul><li>-1: No limit</li><li> &gt;=0: limited system feed-in</li></ul><p>Applies to DC-coupled and AC-coupled feed-in.</p>",
+                    "writable": true
+                },
+                {
+                    "path": "/Settings/CGwacs/OvervoltageFeedIn",
+                    "type": "enum",
+                    "name": "Feed excess DC-coupled PV into grid",
+                    "enum": {
+                        "0": "Don’t feed excess DC-tied PV into grid",
+                        "1": "Feed excess DC-tied PV into the grid"
+                    },
+                    "writable": true
+                },
+                {
+                    "path": "/Settings/CGwacs/PreventFeedback",
+                    "type": "enum",
+                    "name": "Don’t feed excess AC-coupled PV into grid",
+                    "enum": {
+                        "0": "Feed excess AC-tied PV into grid",
+                        "1": "Don’t feed excess AC-tied PV into the grid"
+                    },
+                    "writable": true
+                },
+                {
+                    "path": "/Settings/SystemSetup/MaxChargeCurrent",
+                    "type": "float",
+                    "name": "Charge current limit (A)",
+                    "writable": true
+                }
+            ]
+        },
+        "pathObj": {
+            "path": "/Settings/CGwacs/AcPowerSetPoint",
+            "type": "integer",
+            "name": "Grid set-point (W)",
+            "writable": true
+        },
+        "initial": "",
+        "name": "Grid SetPoint",
+        "x": 300,
+        "y": 140,
+        "wires": []
+    },
+    {
+        "id": "d9e7d94c33bd933a",
+        "type": "victron-input-ess",
+        "z": "455615364d62cb12",
+        "service": "com.victronenergy.settings",
+        "path": "/Settings/CGwacs/AcPowerSetPoint",
+        "serviceObj": {
+            "service": "com.victronenergy.settings",
+            "name": "ESS System Settings",
+            "paths": [
+                {
+                    "path": "/Settings/CGwacs/AcPowerSetPoint",
+                    "type": "integer",
+                    "name": "Grid set-point (W)"
+                },
+                {
+                    "path": "/Settings/CGwacs/BatteryLife/MinimumSocLimit",
+                    "type": "integer",
+                    "name": "Minimum Discharge SOC (%)"
+                },
+                {
+                    "path": "/Settings/CGwacs/BatteryLife/SocLimit",
+                    "type": "integer",
+                    "name": "Active SOC limit (%)"
+                },
+                {
+                    "path": "/Settings/CGwacs/BatteryLife/State",
+                    "type": "enum",
+                    "name": "ESS state",
+                    "enum": {
+                        "1": "BatteryLife enabled (GUI controlled)",
+                        "2": "Optimized Mode /w BatteryLife: self consumption",
+                        "3": "Optimized Mode /w BatteryLife: self consumption, SoC exceeds 85%",
+                        "4": "Optimized Mode /w BatteryLife: self consumption, SoC at 100%",
+                        "5": "Optimized Mode /w BatteryLife: SoC below dynamic SoC limit",
+                        "6": "Optimized Mode /w BatteryLife: SoC has been below SoC limit for more than 24 hours. Charging the battery (5A)",
+                        "7": "Optimized Mode /w BatteryLife: Inverter/Charger is in sustain mode",
+                        "8": "Optimized Mode /w BatteryLife: recharging, SoC dropped by 5% or more below the minimum SoC",
+                        "9": "'Keep batteries charged' mode is enabled",
+                        "10": "Optimized mode w/o BatteryLife: self consumption, SoC at or above minimum SoC",
+                        "11": "Optimized mode w/o BatteryLife: self consumption, SoC is below minimum SoC",
+                        "12": "Optimized mode w/o BatteryLife: recharging, SoC dropped by 5% or more below minimum SoC"
+                    }
+                },
+                {
+                    "path": "/Settings/CGwacs/Hub4Mode",
+                    "type": "enum",
+                    "name": "ESS mode",
+                    "enum": {
+                        "1": "Optimized mode or 'keep batteries charged' and phase compensation enabled",
+                        "2": "Optimized mode or 'keep batteries charged' and phase compensation disabled",
+                        "3": "External control"
+                    }
+                },
+                {
+                    "path": "/Settings/CGwacs/MaxDischargePower",
+                    "type": "integer",
+                    "name": "Max inverter power (W)"
+                },
+                {
+                    "path": "/Settings/CGwacs/OvervoltageFeedIn",
+                    "type": "enum",
+                    "name": "Feed excess DC-coupled PV into grid",
+                    "enum": {
+                        "0": "Don’t feed excess DC-tied PV into grid",
+                        "1": "Feed excess DC-tied PV into the grid"
+                    }
+                },
+                {
+                    "path": "/Settings/CGwacs/PreventFeedback",
+                    "type": "enum",
+                    "name": "Don’t feed excess AC-coupled PV into grid",
+                    "enum": {
+                        "0": "Feed excess AC-tied PV into grid",
+                        "1": "Don’t feed excess AC-tied PV into the grid"
+                    }
+                },
+                {
+                    "path": "/Settings/SystemSetup/MaxChargeCurrent",
+                    "type": "float",
+                    "name": "DVCC Charge current limit (A)"
+                },
+                {
+                    "path": "/Settings/SystemSetup/MaxChargeVoltage",
+                    "type": "float",
+                    "name": "DVCC Maximum charge voltage (V)"
+                }
+            ]
+        },
+        "pathObj": {
+            "path": "/Settings/CGwacs/AcPowerSetPoint",
+            "type": "integer",
+            "name": "Grid set-point (W)"
+        },
+        "initial": "",
+        "name": "Grid SetPoint",
+        "x": 110,
+        "y": 80,
+        "wires": [
+            [
+                "20032189128d63c6"
+            ]
+        ]
+    },
+    {
+        "id": "6cd7d16f6f640782",
+        "type": "join",
+        "z": "455615364d62cb12",
+        "name": "",
+        "mode": "custom",
+        "build": "object",
+        "property": "payload",
+        "propertyType": "msg",
+        "key": "topic",
+        "joiner": "\\n",
+        "joinerType": "str",
+        "accumulate": false,
+        "timeout": "",
+        "count": "2",
+        "reduceRight": false,
+        "reduceExp": "",
+        "reduceInit": "",
+        "reduceInitType": "num",
+        "reduceFixup": "",
+        "x": 430,
+        "y": 60,
+        "wires": [
+            [
+                "c8c64f0ab3f0cbfd"
+            ]
+        ]
+    },
+    {
+        "id": "20032189128d63c6",
+        "type": "change",
+        "z": "455615364d62cb12",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "topic",
+                "pt": "msg",
+                "to": "GridSetPoint",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 280,
+        "y": 80,
+        "wires": [
+            [
+                "6cd7d16f6f640782"
+            ]
+        ]
+    },
+    {
+        "id": "34ae72202380a25b",
+        "type": "change",
+        "z": "455615364d62cb12",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "topic",
+                "pt": "msg",
+                "to": "BatteryPower",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 280,
+        "y": 40,
+        "wires": [
+            [
+                "6cd7d16f6f640782"
+            ]
+        ]
+    },
+    {
+        "id": "629c94cd162c286e",
+        "type": "mqtt out",
+        "z": "455615364d62cb12",
+        "name": "KeepTargetSoC - state",
+        "topic": "N/48e7da86b12f/node-red/KeepTargetSoC",
+        "qos": "",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "faaf3373af8eb90a",
+        "x": 520,
+        "y": 420,
+        "wires": []
+    },
+    {
+        "id": "85aaf2e89c91902b",
+        "type": "function",
+        "z": "455615364d62cb12",
+        "name": "Processing value",
+        "func": "var prev = global.get('KeepTargetSoC') || false;\nvar actual = global.get('KeepTargetSoC') || false;\n\nif (typeof msg.topic === 'string' && msg.topic.includes('node-red/KeepTargetSoC')) {\n    actual = msg.payload.value;\n}\nglobal.set('KeepTargetSoC', actual);\n\nif (prev && !actual) flow.set(\"ChangedToOff\", true);\n\nmsg.payload = JSON.stringify({ \"value\": actual });\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "// Code added here will be run once\n// whenever the node is started.\nflow.set('KeepActualSoC', false);",
+        "finalize": "",
+        "libs": [],
+        "x": 310,
+        "y": 420,
+        "wires": [
+            [
+                "629c94cd162c286e"
+            ]
+        ]
+    },
+    {
+        "id": "20d0046fea6e2017",
+        "type": "inject",
+        "z": "455615364d62cb12",
+        "name": "Retain state",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "5",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 110,
+        "y": 420,
+        "wires": [
+            [
+                "85aaf2e89c91902b"
+            ]
+        ]
+    },
+    {
+        "id": "4d2673fae8b10fb2",
+        "type": "mqtt in",
+        "z": "455615364d62cb12",
+        "name": "KeepTargetSoC",
+        "topic": "W/48e7da86b12f/node-red/KeepTargetSoC",
+        "qos": "2",
+        "datatype": "json",
+        "broker": "faaf3373af8eb90a",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 120,
+        "y": 380,
+        "wires": [
+            [
+                "85aaf2e89c91902b"
+            ]
+        ]
+    },
+    {
+        "id": "8811a0f7a5f128c3",
+        "type": "debug",
+        "z": "455615364d62cb12",
+        "name": "New GridPoint",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 300,
+        "y": 200,
+        "wires": []
+    },
+    {
+        "id": "6ac629d2c3cbaf96",
+        "type": "inject",
+        "z": "455615364d62cb12",
+        "name": "Retain state",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "5",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 110,
+        "y": 500,
+        "wires": [
+            [
+                "d1cf92fb7d15b6e8"
+            ]
+        ]
+    },
+    {
+        "id": "7750fa8b7ef4799e",
+        "type": "mqtt in",
+        "z": "455615364d62cb12",
+        "name": "TargetSoC",
+        "topic": "W/48e7da86b12f/node-red/TargetSoC",
+        "qos": "2",
+        "datatype": "json",
+        "broker": "faaf3373af8eb90a",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 100,
+        "y": 460,
+        "wires": [
+            [
+                "d1cf92fb7d15b6e8"
+            ]
+        ]
+    },
+    {
+        "id": "d1cf92fb7d15b6e8",
+        "type": "function",
+        "z": "455615364d62cb12",
+        "name": "Processing value",
+        "func": "var target = global.get('TargetSoC') || 0.0;\n\nif (typeof msg.topic === 'string' && msg.topic.includes('node-red/TargetSoC')) {\n    target = msg.payload.value;\n}\n\ntarget = Math.round(target);\nglobal.set('TargetSoC', target);\n\nmsg.payload = JSON.stringify({ \"value\": target });\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "// Code added here will be run once\n// whenever the node is started.\nflow.set('KeepActualSoC', false);",
+        "finalize": "",
+        "libs": [],
+        "x": 310,
+        "y": 500,
+        "wires": [
+            [
+                "8f93d5b5c55739c5"
+            ]
+        ]
+    },
+    {
+        "id": "8f93d5b5c55739c5",
+        "type": "mqtt out",
+        "z": "455615364d62cb12",
+        "name": "TargetSoC - state",
+        "topic": "N/48e7da86b12f/node-red/TargetSoC",
+        "qos": "",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "faaf3373af8eb90a",
+        "x": 510,
+        "y": 500,
+        "wires": []
+    },
+    {
+        "id": "d2a50dd158528eea",
+        "type": "mqtt in",
+        "z": "455615364d62cb12",
+        "name": "ChargePower",
+        "topic": "W/48e7da86b12f/node-red/ChargePower",
+        "qos": "2",
+        "datatype": "json",
+        "broker": "faaf3373af8eb90a",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 110,
+        "y": 540,
+        "wires": [
+            [
+                "ea3957a836616426"
+            ]
+        ]
+    },
+    {
+        "id": "a95c104259237fb4",
+        "type": "inject",
+        "z": "455615364d62cb12",
+        "name": "Retain state",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "5",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 110,
+        "y": 580,
+        "wires": [
+            [
+                "ea3957a836616426"
+            ]
+        ]
+    },
+    {
+        "id": "ea3957a836616426",
+        "type": "function",
+        "z": "455615364d62cb12",
+        "name": "Processing value",
+        "func": "var x = global.get('ChargePower') || 0.0;\n\nif (typeof msg.topic === 'string' && msg.topic.includes('node-red/ChargePower')) {\n    x = msg.payload.value;\n}\n\nx = Math.round(x);\nglobal.set('ChargePower', x);\n\nmsg.payload = JSON.stringify({ \"value\": x });\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "// Code added here will be run once\n// whenever the node is started.\nflow.set('KeepActualSoC', false);",
+        "finalize": "",
+        "libs": [],
+        "x": 310,
+        "y": 580,
+        "wires": [
+            [
+                "76d8bf96297a8841"
+            ]
+        ]
+    },
+    {
+        "id": "76d8bf96297a8841",
+        "type": "mqtt out",
+        "z": "455615364d62cb12",
+        "name": "ChargePower - state",
+        "topic": "N/48e7da86b12f/node-red/ChargePower",
+        "qos": "",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "faaf3373af8eb90a",
+        "x": 520,
+        "y": 580,
+        "wires": []
+    },
+    {
+        "id": "65fb34730c3cefa8",
+        "type": "inject",
+        "z": "455615364d62cb12",
+        "name": "Retain state",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "5",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 110,
+        "y": 660,
+        "wires": [
+            [
+                "4635c4e2caa0cb67"
+            ]
+        ]
+    },
+    {
+        "id": "1729bc98d90942b2",
+        "type": "mqtt in",
+        "z": "455615364d62cb12",
+        "name": "DischargePower",
+        "topic": "W/48e7da86b12f/node-red/DischargePower",
+        "qos": "2",
+        "datatype": "json",
+        "broker": "faaf3373af8eb90a",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 120,
+        "y": 620,
+        "wires": [
+            [
+                "4635c4e2caa0cb67"
+            ]
+        ]
+    },
+    {
+        "id": "4635c4e2caa0cb67",
+        "type": "function",
+        "z": "455615364d62cb12",
+        "name": "Processing value",
+        "func": "var x = global.get('DischargePower') || 0.0;\n\nif (typeof msg.topic === 'string' && msg.topic.includes('node-red/DischargePower')) {\n    x = msg.payload.value;\n}\n\nx = Math.round(x);\nglobal.set('DischargePower', x);\n\nmsg.payload = JSON.stringify({ \"value\": x });\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "// Code added here will be run once\n// whenever the node is started.\nflow.set('KeepActualSoC', false);",
+        "finalize": "",
+        "libs": [],
+        "x": 310,
+        "y": 660,
+        "wires": [
+            [
+                "16950d0d9e29cbaf"
+            ]
+        ]
+    },
+    {
+        "id": "16950d0d9e29cbaf",
+        "type": "mqtt out",
+        "z": "455615364d62cb12",
+        "name": "DischargePower - state",
+        "topic": "N/48e7da86b12f/node-red/DischargePower",
+        "qos": "",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "faaf3373af8eb90a",
+        "x": 530,
+        "y": 660,
+        "wires": []
+    },
+    {
+        "id": "50f45dd098cd532f",
+        "type": "victron-input-system",
+        "z": "455615364d62cb12",
+        "service": "com.victronenergy.system",
+        "path": "/Dc/Battery/Soc",
+        "serviceObj": {
+            "service": "com.victronenergy.system",
+            "name": "com.victronenergy.system",
+            "paths": [
+                {
+                    "path": "/Ac/ActiveIn/Source",
+                    "type": "enum",
+                    "name": "AC-Input",
+                    "enum": {
+                        "0": "Not available",
+                        "1": "Grid",
+                        "2": "Generator",
+                        "3": "Shore",
+                        "240": "Inverting"
+                    }
+                },
+                {
+                    "path": "/Ac/Consumption/L1/Power",
+                    "type": "float",
+                    "name": "AC Consumption L1 (W)"
+                },
+                {
+                    "path": "/Ac/Consumption/L2/Power",
+                    "type": "float",
+                    "name": "AC Consumption L2 (W)"
+                },
+                {
+                    "path": "/Ac/Consumption/L3/Power",
+                    "type": "float",
+                    "name": "AC Consumption L3 (W)"
+                },
+                {
+                    "path": "/Ac/Genset/DeviceType",
+                    "type": "float",
+                    "name": "Genset Device Type",
+                    "enum": {}
+                },
+                {
+                    "path": "/Ac/Genset/L1/Power",
+                    "type": "float",
+                    "name": "Genset L1 (W)"
+                },
+                {
+                    "path": "/Ac/Genset/L2/Power",
+                    "type": "float",
+                    "name": "Genset L2 (W)"
+                },
+                {
+                    "path": "/Ac/Genset/L3/Power",
+                    "type": "float",
+                    "name": "Genset L3 (W)"
+                },
+                {
+                    "path": "/Ac/Genset/NumberOfPhases",
+                    "type": "integer",
+                    "name": "Genset Number Of Phases"
+                },
+                {
+                    "path": "/Ac/Grid/DeviceType",
+                    "type": "float",
+                    "name": "Grid Device Type"
+                },
+                {
+                    "path": "/Ac/Grid/L1/Power",
+                    "type": "float",
+                    "name": "Grid L1 (W)"
+                },
+                {
+                    "path": "/Ac/Grid/L2/Power",
+                    "type": "float",
+                    "name": "Grid L2 (W)"
+                },
+                {
+                    "path": "/Ac/Grid/L3/Power",
+                    "type": "float",
+                    "name": "Grid L3 (W)"
+                },
+                {
+                    "path": "/Ac/Grid/NumberOfPhases",
+                    "type": "integer",
+                    "name": "Grid Number Of Phases"
+                },
+                {
+                    "path": "/Ac/PvOnGenset/L1/Power",
+                    "type": "float",
+                    "name": "PV Power AC-tied on Generator L1"
+                },
+                {
+                    "path": "/Ac/PvOnGenset/L2/Power",
+                    "type": "float",
+                    "name": "PV Power AC-tied on Generator L2"
+                },
+                {
+                    "path": "/Ac/PvOnGenset/L3/Power",
+                    "type": "float",
+                    "name": "PV Power AC-tied on Generator L3"
+                },
+                {
+                    "path": "/Ac/PvOnGenset/NumberOfPhases",
+                    "type": "integer",
+                    "name": "PV Power AC-tied on Generator Number Of Phases"
+                },
+                {
+                    "path": "/Ac/PvOnGrid/L1/Power",
+                    "type": "float",
+                    "name": "PV - AC-coupled on input L1 (W)"
+                },
+                {
+                    "path": "/Ac/PvOnGrid/L2/Power",
+                    "type": "float",
+                    "name": "PV - AC-coupled on input L2 (W)"
+                },
+                {
+                    "path": "/Ac/PvOnGrid/L3/Power",
+                    "type": "float",
+                    "name": "PV - AC-coupled on input L3 (W)"
+                },
+                {
+                    "path": "/Ac/PvOnGrid/NumberOfPhases",
+                    "type": "integer",
+                    "name": "PV - AC-coupled on input Number Of Phases"
+                },
+                {
+                    "path": "/Ac/PvOnOutput/L1/Power",
+                    "type": "float",
+                    "name": "PV - AC-coupled on output L1 (W)"
+                },
+                {
+                    "path": "/Ac/PvOnOutput/L2/Power",
+                    "type": "float",
+                    "name": "PV - AC-coupled on output L2 (W)"
+                },
+                {
+                    "path": "/Ac/PvOnOutput/L3/Power",
+                    "type": "float",
+                    "name": "PV - AC-coupled on output L3 (W)"
+                },
+                {
+                    "path": "/Ac/PvOnOutput/NumberOfPhases",
+                    "type": "integer",
+                    "name": "PV - AC-coupled on output Number Of Phases"
+                },
+                {
+                    "path": "/Buzzer/State",
+                    "type": "float",
+                    "name": "Buzzer State",
+                    "enum": {
+                        "0": "Off",
+                        "1": "On"
+                    }
+                },
+                {
+                    "path": "/Dc/Battery/ConsumedAmphours",
+                    "type": "float",
+                    "name": "Battery Consumed Amphours (Ah)"
+                },
+                {
+                    "path": "/Dc/Battery/Current",
+                    "type": "float",
+                    "name": "Battery current (A)"
+                },
+                {
+                    "path": "/Dc/Battery/Power",
+                    "type": "float",
+                    "name": "Battery Power (W)"
+                },
+                {
+                    "path": "/Dc/Battery/Soc",
+                    "type": "float",
+                    "name": "Battery State of Charge (%)"
+                },
+                {
+                    "path": "/Dc/Battery/State",
+                    "type": "enum",
+                    "name": "Battery state",
+                    "enum": {
+                        "0": "idle",
+                        "1": "charging",
+                        "2": "discharging"
+                    }
+                },
+                {
+                    "path": "/Dc/Battery/Temperature",
+                    "type": "float",
+                    "name": "Battery temperature (C)"
+                },
+                {
+                    "path": "/Dc/Battery/TimeToGo",
+                    "type": "float",
+                    "name": "Battery Time to Go (h)"
+                },
+                {
+                    "path": "/Dc/Battery/Voltage",
+                    "type": "float",
+                    "name": "Battery voltage (V)"
+                },
+                {
+                    "path": "/Dc/Charger/Power",
+                    "type": "integer",
+                    "name": "AC-Chargers - power (W)"
+                },
+                {
+                    "path": "/Dc/Pv/Current",
+                    "type": "float",
+                    "name": "MPPTs - current (A)"
+                },
+                {
+                    "path": "/Dc/Pv/Power",
+                    "type": "float",
+                    "name": "MPPTs - power (W)"
+                },
+                {
+                    "path": "/Dc/System/Power",
+                    "type": "float",
+                    "name": "DC System (W)"
+                },
+                {
+                    "path": "/Dc/Vebus/Current",
+                    "type": "float",
+                    "name": "VE.Bus charge current (A)"
+                },
+                {
+                    "path": "/Dc/Vebus/Power",
+                    "type": "float",
+                    "name": "VE.Bus charge power (W)"
+                },
+                {
+                    "path": "/Serial",
+                    "type": "string",
+                    "name": "Serial (System)"
+                },
+                {
+                    "path": "/SystemType",
+                    "type": "string",
+                    "name": "System type"
+                },
+                {
+                    "path": "/Timers/TimeOff",
+                    "type": "float",
+                    "name": "Time off (s)"
+                },
+                {
+                    "path": "/Timers/TimeOnGenerator",
+                    "type": "float",
+                    "name": "Time generator (s)"
+                },
+                {
+                    "path": "/Timers/TimeOnGrid",
+                    "type": "float",
+                    "name": "Time grid (s)"
+                },
+                {
+                    "path": "/Timers/TimeOnInverter",
+                    "type": "float",
+                    "name": "Time inverting (s)"
+                }
+            ]
+        },
+        "pathObj": {
+            "path": "/Dc/Battery/Soc",
+            "type": "float",
+            "name": "Battery State of Charge (%)"
+        },
+        "initial": "",
+        "name": "Battery SoC",
+        "x": 110,
+        "y": 320,
+        "wires": [
+            [
+                "bc15690f31b8db1a"
+            ]
+        ]
+    },
+    {
+        "id": "bc15690f31b8db1a",
+        "type": "change",
+        "z": "455615364d62cb12",
+        "name": "Set global value",
+        "rules": [
+            {
+                "t": "set",
+                "p": "BatterySoC",
+                "pt": "global",
+                "to": "payload",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 280,
+        "y": 320,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "faaf3373af8eb90a",
+        "type": "mqtt-broker",
+        "name": "Cerbo",
+        "broker": "localhost",
+        "port": "1883",
+        "clientid": "",
+        "autoConnect": true,
+        "usetls": false,
+        "protocolVersion": "4",
+        "keepalive": "60",
+        "cleansession": true,
+        "birthTopic": "",
+        "birthQos": "0",
+        "birthPayload": "",
+        "birthMsg": {},
+        "closeTopic": "",
+        "closeQos": "0",
+        "closePayload": "",
+        "closeMsg": {},
+        "willTopic": "",
+        "willQos": "0",
+        "willPayload": "",
+        "willMsg": {},
+        "userProps": "",
+        "sessionExpiry": ""
+    }
+]
