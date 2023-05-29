@@ -1,0 +1,80 @@
+mqtt:
+  sensor:
+    - name: "Battery Power"
+      state_topic: "victron/N/system/0/Dc/Battery/Power"
+      device_class: power
+      unique_id: battery_power
+      unit_of_measurement: "W"
+      value_template: "{{ value_json.value | round(0) }}"
+    - name: "Battery SoC"
+      state_topic: "victron/N/battery/512/Soc"
+      device_class: battery
+      unique_id: battery_soc
+      unit_of_measurement: "%"
+      value_template: "{{ value_json.value | round(0) }}"
+  binary_sensor:
+    - name: "Grid Lost Alarm"
+      state_topic: "victron/N/vebus/276/Alarms/GridLost"
+      device_class: plug
+      unique_id: grid_lost_alarm
+      payload_on: 0
+      payload_off: 2
+      value_template: "{{ value_json.value }}"
+  switch:
+    - unique_id: KeepTargetSoC
+      name: "Udržuj požadované SoC"
+      device_class: switch
+      state_topic: "victron/N/node-red/KeepTargetSoC"
+      command_topic: "victron/W/node-red/KeepTargetSoC"
+      payload_on:  '{"value": true}'
+      payload_off: '{"value": false}'
+      state_on:  true
+      state_off: false
+      qos: 0
+      retain: false
+      value_template: "{{ value_json.value }}"
+  number:
+    - unique_id: TargetSoC
+      command_template: '{"value": {{ value }}}'
+      command_topic: "victron/W/node-red/TargetSoC"
+      device_class: battery
+      max: 95
+      min: 20
+      name: "Požadované SoC"
+      state_topic: "victron/N/node-red/TargetSoC"
+      step: 1
+      unit_of_measurement: ' %'
+      value_template: "{{ value_json.value }}"
+    - unique_id: DischargePower
+      command_template: '{"value": {{ value }}}'
+      command_topic: "victron/W/node-red/DischargePower"
+      device_class: power
+      max: 14400
+      min: 0
+      name: "Vybíjecí výkon baterie"
+      state_topic: "victron/N/node-red/DischargePower"
+      step: 100
+      unit_of_measurement: ' W'
+      value_template: "{{ value_json.value }}"
+    - unique_id: ChargePower
+      command_template: '{"value": {{ value }}}'
+      command_topic: "victron/W/node-red/ChargePower"
+      device_class: power
+      max: 17000
+      min: 0
+      name: "Nabíjecí výkon baterie"
+      state_topic: "victron/N/node-red/ChargePower"
+      step: 100
+      unit_of_measurement: ' W'
+      value_template: "{{ value_json.value }}"
+    - unique_id: AcPowerSetPoint
+      command_template: '{"value": {{ value }}}'
+      command_topic: "victron/W/settings/0/Settings/CGwacs/AcPowerSetPoint"
+      device_class: power
+      max: 10500
+      min: -14400
+      name: "AC Power SetPoint"
+      state_topic: "victron/N/settings/0/Settings/CGwacs/AcPowerSetPoint"
+      step: 100
+      unit_of_measurement: ' W'
+      value_template: "{{ value_json.value }}"
